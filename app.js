@@ -1,5 +1,4 @@
 const express = require("express");
-const app = express();
 const path = require("node:path");
 const session = require("express-session")
 const passport = require("./config/passportConfig.js")
@@ -12,6 +11,8 @@ const loginRouter = require("./routes/loginRouter");
 const feedRouter = require("./routes/feedRouter");
 const logoutRouter = require("./routes/logoutRouter")
 const registerRouter = require("./routes/registerRouter")
+
+const app = express();
 
 
  // Activa la configuración de Passport

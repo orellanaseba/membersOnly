@@ -37,6 +37,8 @@ const eliminarPost = async(id) => {
     return await pool.query("DELETE FROM post WHERE id_post = $1", [id])
 }
 
+obtenerUsuarios();
+
 module.exports = {
     crearNuevoUsuario,
     obtenerUsuarioNombre,

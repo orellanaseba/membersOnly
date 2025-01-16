@@ -6,9 +6,9 @@ const { Pool } = pg
 const pool = new Pool({
     host: process.env.PGHOST,
     user: process.env.PGUSER,
-    password: process.env.PGPASSWORD,
+    password: process.env.PASSWORD,
     database: process.env.PGDATABASE,
-    port: process.env.PGPORT,
+    PORT: process.env.PGPORT,
     ssl: {
         rejectUnauthorized: false,
     }

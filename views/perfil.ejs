@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/icons/lock.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+    <title>
+        Usuario: <%= user.usuario %>
+    </title>
+</head>
+
+<body>
+    <%- include("partials/header.ejs") %>
+        <section class="perfil-section">
+        <article class="user-img-div"> 
+        <% if(posts[0].usuario === "admin") { %>
+            <img src="/icons/rat.jpg" alt="admin icon">
+            <% } else { %>
+            <img src="/icons/user2.png" alt="user icon">
+            <% } %>
+        </article>
+        <section class="perfil-section">
+            <%- include("partials/post.ejs") %>
+        </section>
+        </section>
+
+</body>
+
+</html>

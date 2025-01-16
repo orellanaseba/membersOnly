@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/icons/lock.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+    <title>Iniciar sesión</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <section class="section-login">
+        <h1>Iniciar sesión</h1>
+        <form action="/login" method="post" class="form-login">
+            <input type="text" name="username" placeholder="Nombre de usuario">
+            <input type="password" name="password" placeholder="Contraseña">
+            <div class="icons-login">
+                <img src="/icons/google.png" alt="">
+                <img src="/icons/facebook.png" alt="">
+            </div>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </section>
+</body>
+</html>

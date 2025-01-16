@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/icons/lock.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+    <title>Feed</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <% if(!user) { %>
+        <main class="feed">
+            <aside class="aside-menu">
+                <nav>
+                    <div>
+                        <p>Usuario Invitado</p>
+                        <li><a href="/login">Mi Perfil</a></li>
+                    </div>
+                </nav>
+            </aside>
+            <section class="post-view">
+                <div class="post-scroll">
+                    <%- include("partials/post.ejs") %>
+                </div>
+            </section>
+        </main>
+    <% } else { %>
+
+    <main class="feed">
+        <aside class="aside-menu">
+            <nav>
+                <div>
+                    <p>¡Bienvenido de nuevo, <%= user.usuario %>!</p>
+                    <li><a href="/feed/perfil/<%= user.id_usuario %>">Mi Perfil</a></li>
+                </div>
+                <a href="">@LinkedIn</a>
+            </nav>
+        </aside>
+        <section class="post-view">
+            <div class="post-scroll">
+                <section class="post-inputs">
+                    <form action="/feed" method="post">
+                        <textarea name="comentario" id="post" style="resize: none;" placeholder="Escribe algo..." maxlength="200"></textarea>
+                        <input type="text" value="<%= user.usuario %>" name="usuario" hidden>
+                        <input type="text" value="<%= user.id_usuario %>" name="id_usuario", hidden>
+                        <button class="btn-post">Postear</button>
+                    </form>
+                </section>
+                <%- include("partials/post.ejs") %>
+            </div>
+        </section>
+    </main>
+    <% } %>
+
+</body>
+</html>

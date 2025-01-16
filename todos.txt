@@ -1,0 +1,22 @@
+Tareas:
+- ✅Crear la parte visual de la App
+- ✅Crear múltiples ventanas
+- ✅Establecer rutas
+
+- Definir queries
+- ✅Permitir iniciar sesión
+- ✅Cambiar permisos, Admin/Usuario
+- ✅Mostrar enlaces del header si el usuario ha iniciado sesión.
+- ✅Crear interfaz de post como Twitter.
+- ✅Permitir ver el perfil del usuario
+- ✅Poder eliminar publicaciones y usuarios como "Admin"
+- ✅combinar "posts" y "usuarios" para poder mostrarlos en el Feed
+- ✅Poder realizar una publicación
+
+// Funcionalidades
+- Si el usuario no ha iniciado sesión, mostrar un modal para registrarse o iniciar sesión. Si no se cumple lo anterior, permitir al usuario ver posteos pero solamente como "usuario invitado", es decir, no se puede ver el nombre del que ha hecho la publicación, ni tampoco la foto.
+
+- ✅Al hacer click en el perfil del usuario, se muestran todas sus publicaciones
+
+// Próximamente
+Realizar un "Etch-A-Sketch" mejor que el anterior. Github repo.

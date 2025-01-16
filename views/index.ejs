@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/icons/lock.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+    <title>MembersOnly</title>
+</head>
+<body>
+    
+    <%- include("partials/header.ejs") %>
+
+    <main class="main">
+        <section class="banner">
+            <div class="banner-txt-div">
+                <h1>¡Accede al contenido exclusivo de los usuarios y comparte sus publicaciones!</h1>
+                <p>Crea tus propias publicaciones y compártelo con tus amigos!</p>
+                <img src="/icons/computer.png" alt="">
+            </div>
+            <form action="/register" method="post" class="form-registro">
+                <div>
+                    <%- include("partials/errors.ejs") %>
+                </div>
+                <p>Registro</p>
+                <hr style="width: 80%;">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido (opcional)">
+                <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="contrasenia" placeholder="Contraseña" required>
+                <button type="submit">Crear cuenta</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

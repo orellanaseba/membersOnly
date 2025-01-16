@@ -1,0 +1,19 @@
+<header class="header">
+    <% if(user) { %>
+        <h1><a class="logo" href="/feed"><i><img src="/icons/lock.png" alt=""></i>MembersOnly</a></h1>
+    <% } else { %>
+        <h1><a class="logo" href="/"><i><img src="/icons/lock.png" alt=""></i>MembersOnly</a></h1>
+   <% } %>
+    <nav class="nav-header">
+        <% if(user) { %>
+            <a href="/feed">Feed</a>
+            <button><a href="/logout">Cerrar sesión</a></button>
+
+        <% } else { %>
+            <a href="/login">Feed</a>
+            <a href="/feed/invitado">Invitado</a>
+            <button><a href="/login">Iniciar sesión</a></button>
+        <% } %>
+        <!-- <img src="/icons/user.png" alt=""> -->
+    </nav>
+</header>
